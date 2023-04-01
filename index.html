@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Problema de Matemática Aleatório</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+
+		h1 {
+			margin-top: 50px;
+		}
+
+		#problema {
+			font-size: 30px;
+			margin-top: 50px;
+			margin-bottom: 50px;
+			padding: 20px;
+			border: 2px solid #000;
+			border-radius: 10px;
+			display: none;
+		}
+
+		button {
+			font-size: 20px;
+			padding: 10px 20px;
+			border: none;
+			background-color: #4CAF50;
+			color: #fff;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<h1>Problema de Matemática Aleatório</h1>
+	<button onclick="gerarProblema()">Gerar Problema</button>
+	<div id="problema"></div>
+
+	<script>
+		var problemas = [
+			"Qual é o resultado de 3 + 5?",
+			"Qual é o resultado de 9 - 2?",
+			"Qual é o resultado de 6 * 7?",
+			"Qual é o resultado de 20 / 5?",
+			"Qual é o resultado de 2^3?",
+			"Qual é o resultado de 10 % 3?",
+			"Qual é o resultado de (5 + 3) * 2?",
+			"Qual é o resultado de 2 * 2 * 2 * 2?"
+		];
+
+		function gerarProblema() {
+			var index = Math.floor(Math.random() * problemas.length);
+			var problema = problemas[index];
+			document.getElementById("problema").textContent = problema;
+			document.getElementById("problema").style.display = "block";
+		}
+	</script>
+</body>
+</html>
